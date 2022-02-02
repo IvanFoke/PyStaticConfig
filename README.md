@@ -1,5 +1,5 @@
 # PyStaticConfig
- A JSON config for python application with static class. 
+ Static python class for storing a JSON config file. 
  
  -----
 ## Description
