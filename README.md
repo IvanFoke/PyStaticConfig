@@ -6,6 +6,12 @@
  `BaseConfig` from `pystaticconfig` is a base class for your config. It creates file with path stored in attribute `_config_location`. Class is static so it doesn't need to be instantiated.   
  Private fields starting with underscore (like `_config_location`) won't be saved in JSON file. Other public attributes will be stored in it. 
 
+## Installation
+ Package is uploaded to PyPI. Install it with  
+ ```bash
+ pip install pystaticconfig
+ ```
+
 ## Usage
  Inherit from `BaseConfig` for creating your own config. Like this:  
  **config.py**  
