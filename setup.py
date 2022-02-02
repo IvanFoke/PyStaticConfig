@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pystaticconfig",
-    version="0.0.1",
+    version="0.0.2",
     author="Ivan Chistiakov",
     description="JSON config with static class in python",
     long_description=long_description,
@@ -17,7 +17,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["os", "json"]
 )
 
 # python setup.py sdist bdist_wheel
