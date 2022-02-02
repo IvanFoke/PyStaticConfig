@@ -6,14 +6,28 @@ class BaseConfig:
     """Base class for config. Creates file with name stored in `_config_location`. 
     Class is static so it doesn't need to be instantiated. 
 
-    Private fiels starting with underscore (like `_config_location`) won't
+    Private fields starting with underscore (like `_config_location`) won't
     be saved in JSON file. Other public attributes will be stored in file. 
 
     Inherit from `BaseConfig` for creating your own config. Like this:
     ```python
+    # config.py
     class Config(BaseConfig):
-
+        _config_location = '/path/to/app/config.json'
+        attr1 = 'value1'
+        attr2 = {'1': 1, '2': 2}
     
+    # app.py
+    from config import Config
+    
+    # load from file config.json
+    Config.load()
+    
+    # change values
+    Config.attr1 = 'new_value'
+    
+    # save
+    Config.save()
     ```
     """
     # values starting with '_' will not be included in the json config file
